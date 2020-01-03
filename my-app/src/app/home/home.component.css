@@ -1,0 +1,8 @@
+.main-banner{
+    width:100%;
+    overflow:hidden;
+    background-image: url("../../assets/images/elephant.jpg");
+    height:500px;
+    background-size:100%;
+    background-position: center center;
+}
