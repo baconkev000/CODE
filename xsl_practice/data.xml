@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl" ?>
+<tdata>
+    <week>
+        <num>Week 1</num>
+        <name>Jarvis</name>
+        <bd>10/26/1999</bd>
+    </week>
+    <week>
+        <num>Week 2</num>
+        <name>Corey</name>
+        <bd>11/26/1999</bd>
+    </week>
+    <week>
+        <num>Week 2</num>
+        <name>Slime</name>
+        <bd>12/26/1999</bd>
+    </week>
+    <week>
+        <num>Week 2</num>
+        <name>Slatt</name>
+        <bd>1/26/2000</bd>
+    </week>
+</tdata>

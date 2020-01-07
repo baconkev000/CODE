@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href = "css/turntable.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="plug/jquery.tiltedpage-scroll.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+        <div class="main">
+                <div class="output"></div>
+
+              </div>
+              <div class="template">
+                        {{#each this}}
+            
+                        <div class="mySlides tps-section tps-inview{{#if @first}}current{{else}}{{/if}} {{#if @last}}last-page{{else}}page{{ @index}}{{/if}}">
+                                
+                                <div class="person  {{color}}">
+                                <h1>Name: {{name}}</h1>
+                                    
+                                <div>
+                                        <h3 class="open">About &#9662;</h3>
+                                        <ul class="ul">
+                                            <li>Color: {{color}}</li>
+                                            <li class="open">Food &#9662;</li>
+                                        </ul>
+                                        <ul class="ul">
+                                            {{#each this.food}}
+                                            <li>{{this}}</li>
+                                            {{/each}}
+                                        </ul>
+                                        <h3 class="open">Pet &#9662;</h3>
+                                        <ul class="ul">
+                                            <li>Name: {{pet.name}}</li>
+                                            <li>Animal: {{pet.animal}}</li>
+                                            <li>Color: {{pet.color}}</li>
+                                            <li class="open">Food &#9662;</li>
+                                        </ul>
+                                        <ul class="pet-food ul">
+                                                {{#each this.pet.food}}
+                                                <li>{{this}}</li>
+                                                {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                        {{/each}}
+            
+                    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

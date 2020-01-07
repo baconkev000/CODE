@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href = "style.css">
+    <link rel="stylesheet" type="text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+        <div class="output"></div>
+        <div class="slideshow template">
+            {{#each this}}
+
+            <section class="mySlides {{color}} {{#if @first}}current{{else}}{{/if}}">
+                <div class="row">
+                <div class="col-lg-12 content">
+                    <div class="back-color">
+                    <h1>Name: {{name}}</h1>
+                    <div class="person">
+                        <div>
+                            <h3 class="open">About &#9662;</h3>
+                            <ul class="ul">
+                                <li>Color: {{color}}</li>
+                                <li class="open">Food &#9662;</li>
+                            </ul>
+                            <ul class="ul">
+                                {{#each this.food}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                            <h3 class="open">Pet &#9662;</h3>
+                            <ul class="ul">
+                                <li>Name: {{pet.name}}</li>
+                                <li>Animal: {{pet.animal}}</li>
+                                <li>Color: {{pet.color}}</li>
+                                <li class="open">Food &#9662;</li>
+                            </ul>
+                            <ul class="pet-food ul">
+                                    {{#each this.pet.food}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </section>
+            {{/each}}
+
+        </div>
+        <a class="prev" >&#10094;</a> 
+        <a class="next" >&#10095;</a>
+
+</body>
+<script></script>
+</html>
