@@ -10,6 +10,11 @@ addEventListener("resize", function(){
     init();
 })
 
+addEventListener("click", function(){
+
+    init();
+})
+
 
 var c = canvas.getContext('2d');
 
@@ -57,7 +62,7 @@ function Circle(x,y,dx,dy,radius, color) {
     this.draw();
     }
 }
-var friction = .98;
+var friction = 1;
 
 var circleArray;
 function init(){
