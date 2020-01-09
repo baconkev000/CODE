@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+import { pieces } from '../pieces';
 
 @Component({
     selector:'home',
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent{
-
+    pieces = pieces;
 }

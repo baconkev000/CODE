@@ -1,11 +1,21 @@
-<h2>Gallery</h2>
-<br />
+<div class="container">
+    <div class="col-sm-12">
+        <h2>Gallery</h2>
+        <br />
+        <div class="row flex-container">
+                <div class="img-box" id="{{piece.name}}" (click)="test(piece.name)" *ngFor="let piece of pieces">
+                    <div class="learn-more"><div class="learn-more-text">Learn More</div></div>
+                    <img class="gallery-img" src= '{{piece.img}}'>
+                    {{piece.name}}
+                </div>
+            <br />
 
-<div class="row flex-container">
-        <div class="img-box" *ngFor="let piece of pieces">
-            <div class="learn-more"><div class="learn-more-text">Learn More</div></div>
-            <img class="gallery-img" src= '{{piece.img}}' >
         </div>
-    <br />
-
+    </div>
+</div>
+<div class="modal-wrap">
+    <div class="modal-content">
+        <div class="modal-img"><img class="gallery-img" src= '../../assets/images/elephant.jpg'></div>
+        <p class="modal-text">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
 </div>
